@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>🌦️ Weather </h1>
+
+  <div class="search-box">
+    <input type="text" id="cityInput" placeholder="Search city..." />
+    <button id="searchBtn">Search</button>
+    <!-- <button id="locateBtn" title="Use my location">📍</button> -->
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Current Weather -->
+  <section id="currentWeather" class="card hidden">
+    <div class="weather-header">
+      <h2 id="cityName"></h2>
+      <button id="favBtn">⭐</button>
+    </div>
+    <p id="dateTime"></p>
+
+    <div class="weather-main">
+      <img id="weatherIcon" />
+      <h1 id="temperature"></h1>
+      <p id="condition"></p>
+    </div>
+
+    <div class="weather-details">
+      <p>💧 Humidity: <span id="humidity"></span>%</p>
+      <p>💨 Wind: <span id="wind"></span> m/s</p>
+      <p>🌡️ Pressure: <span id="pressure"></span> hPa</p>
+    </div>
+  </section>
+
+  <!-- Forecast -->
+  <section>
+    <h2 class="section-title">5-Day Forecast</h2>
+    <div id="forecast" class="forecast"></div>
+  </section>
+
+  <!-- Favorites -->
+  <aside class="favorites">
+    <h3>⭐ Favorites</h3>
+    <ul id="favoriteList"></ul>
+  </aside>
+
+</main>
+
+<div id="loading" class="loading hidden">Loading...</div>
+<p id="error" class="error"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
